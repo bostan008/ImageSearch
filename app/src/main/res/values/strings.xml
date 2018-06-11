@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ImageSearchTask</string>
+    <string name="search_images">Search images</string>
+    <string name="oops">Oops something went wrong try again!!!</string>
+    <string name="no_matching_results">No matching results!!!</string>
+</resources>
