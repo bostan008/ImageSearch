@@ -5,7 +5,7 @@ import com.deleven.imagesearchtask.base.mvp.BaseView
 import com.deleven.imagesearchtask.imagelisting.models.ApiResponse
 import io.reactivex.Observable
 
-interface ImageListingView {
+interface ImageListingContract {
 
     interface View : BaseView {
         fun showImageListing(apiResponse: ApiResponse)
