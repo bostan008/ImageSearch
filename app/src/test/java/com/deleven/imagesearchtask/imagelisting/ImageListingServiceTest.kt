@@ -33,14 +33,14 @@ class ImageListingServiceTest {
         mockWebServer = MockWebServer()
         mockWebServer.start()
 
-        val okHttpClient = OkHttpClient.Builder()
-                .build()
+//        val okHttpClient = OkHttpClient.Builder()
+//                .build()
 
         service = Retrofit.Builder()
                 .baseUrl(mockWebServer.url("/"))
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .client(okHttpClient)
+                //.client(okHttpClient)
                 .build()
                 .create(ImageListingApi::class.java)
     }
@@ -71,8 +71,8 @@ class ImageListingServiceTest {
         val apiResponse:ApiResponse
 
         testObserver.assertValue {
-          // it.total == 12972 // correct one
-             it.total == 129721 //incorrect one
+           it.total == 12972 // correct one
+             //it.total == 129721 //incorrect one
         }
 
     }
